@@ -2,7 +2,7 @@
 class TimesADay {
 
   //Attributes
-  late dynamic id;
+  late dynamic? id;
   late List<DateTime>? sun;
   late List<DateTime>? mon;
   late List<DateTime>? tue;

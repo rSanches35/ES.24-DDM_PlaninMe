@@ -3,14 +3,31 @@ import 'package:flutter_test/flutter_test.dart';
 
 import 'package:planin_me/domain/interface/idao_task.dart';
 import 'package:planin_me/domain/dto/task_dto.dart';
+import 'package:planin_me/domain/times_a_day.dart';
 import 'package:planin_me/domain/task.dart';
 
 void main() {
 
   //Attributes
   late Task task;
+  late TimesADay times_a_day;
   late DTOTask dto;
   late DAOTaskFake dao;
+
+  group(['GROUP_Description'], () { 
+
+    setUp(() { dao = DAOTaskFake();});
+
+    test('TEST_Description', () {
+
+      times_a_day = TimesADay();
+
+      dto = DTOTask(name: "Test", times_a_day: times_a_day, priority: 2);
+      task = Task(dto: dto, dao: dao);
+
+      expect(() => task.save(dto), returnsNormally);
+    });
+  });
 }
 
 //DAOFake
