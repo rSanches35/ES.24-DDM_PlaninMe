@@ -1,4 +1,5 @@
 
+import 'package:planin_me/domain/interface/idao_task.dart';
 import 'package:planin_me/domain/dto/task_dto.dart';
 import 'package:planin_me/domain/times_a_day.dart';
 
@@ -13,9 +14,10 @@ class Task {
   late bool isActive = true;
 
   late DTOTask dto;
+  late IDAOTask dao;
 
   //Methods
-  Task({required this.dto}) {
+  Task({required this.dto, required this.dao}) {
 
     id = dto.id;
     name = dto.name;
@@ -24,6 +26,8 @@ class Task {
     priority = dto.priority;
     isActive = dto.isActive;
   }
+
+  DTOTask save(DTOTask dto){ return dao.save(dto);}
 
   //Task duplicate(){ return '';}
   String share(){ return '';}
