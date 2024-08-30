@@ -1,15 +1,13 @@
 
-import 'package:planin_me/domain/times.dart';
-
 class TimesADay {
 
-  late List<Times> sun;
-  late List<Times> mon;
-  late List<Times> tue;
-  late List<Times> wed;
-  late List<Times> thu;
-  late List<Times> fri;
-  late List<Times> sat;
+  late List<DateTime> sun;
+  late List<DateTime> mon;
+  late List<DateTime> tue;
+  late List<DateTime> wed;
+  late List<DateTime> thu;
+  late List<DateTime> fri;
+  late List<DateTime> sat;
 
   TimesADay(){ }
 }

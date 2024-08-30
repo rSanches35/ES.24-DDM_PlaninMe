@@ -10,8 +10,8 @@ class Task {
   late bool isActive = true;
 
 
-  Task(){ }
-  
+  Task(){  }
+
   //Task duplicate(){ return '';}
   String share(){ return '';}
 }
