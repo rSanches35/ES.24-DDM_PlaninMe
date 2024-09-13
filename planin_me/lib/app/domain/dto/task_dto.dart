@@ -1,5 +1,5 @@
 
-import 'package:planin_me/domain/times_a_day.dart';
+import 'package:planin_me/app/domain/times_a_day.dart';
 
 class DTOTask {
 

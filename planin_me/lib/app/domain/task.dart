@@ -1,7 +1,7 @@
 
-import 'package:planin_me/domain/interface/idao_task.dart';
-import 'package:planin_me/domain/dto/task_dto.dart';
-import 'package:planin_me/domain/times_a_day.dart';
+import 'package:planin_me/app/domain/interface/idao_task.dart';
+import 'package:planin_me/app/domain/dto/task_dto.dart';
+import 'package:planin_me/app/domain/times_a_day.dart';
 
 class Task {
 

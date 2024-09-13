@@ -1,5 +1,5 @@
 
-import 'package:planin_me/domain/dto/task_dto.dart';
+import 'package:planin_me/app/domain/dto/task_dto.dart';
 
 abstract class IDAOTask {
 
