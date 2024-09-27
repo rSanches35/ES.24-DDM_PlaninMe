@@ -10,12 +10,12 @@ class ProfessorList extends StatelessWidget {
     return [
       DTOTask(
           name: 'Wake Up',
-          priority: 1,
+          priority: 3,
           isActive: true,
           times_a_day: TimesADay()),
       DTOTask(
           name: 'Feed Neko',
-          priority: 3,
+          priority: 1,
           isActive: true,
           times_a_day: TimesADay()),
       DTOTask(
@@ -45,9 +45,9 @@ class ProfessorList extends StatelessWidget {
               itemBuilder: (context, index) {
                 var task = list[index];
                 return ListTile(
-                  leading: Icon(Icons.person),
+                  leading: Icon(Icons.insert_invitation_rounded),
                   title: Text(task.name),
-                  subtitle: Text('Priority:', ),
+                  subtitle: Text('Priority: ${task.priority}'),
                 );
               },
             );
