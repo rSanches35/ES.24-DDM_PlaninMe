@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:planin_me/widget/rotes.dart';
+import 'package:planin_me/widget/routes.dart';
 
 import 'package:planin_me/widget/task_list.dart';
 import 'package:planin_me/widget/task_form.dart';
@@ -19,9 +19,9 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(primarySwatch: Colors.cyan),
       routes: {
-        Rotes.home : (context) => TaskList(),
-        Rotes.taskForm : (context) => TaskForm(),
-        Rotes.taskDetails : (context) => TaskDetails()
+        Routes.home : (context) => TaskList(),
+        Routes.taskForm : (context) => TaskForm(),
+        Routes.taskDetails : (context) => TaskDetails()
       },
     );
   }

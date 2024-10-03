@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:planin_me/widget/rotes.dart';
+import 'package:planin_me/widget/routes.dart';
 
 class TaskDetails extends StatelessWidget {
 
