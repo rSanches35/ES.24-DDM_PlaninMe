@@ -2,13 +2,11 @@ import 'package:flutter_test/flutter_test.dart';
 
 import 'package:planin_me/app/domain/interface/idao_task.dart';
 import 'package:planin_me/app/domain/dto/task_dto.dart';
-import 'package:planin_me/app/domain/times_a_day.dart';
 import 'package:planin_me/app/domain/task.dart';
 
 void main() {
   //Attributes
   late Task task;
-  late TimesADay times_a_day;
   late DTOTask dto;
   late DAOTaskFake dao;
 
