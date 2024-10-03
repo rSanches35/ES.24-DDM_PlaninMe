@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:planin_me/app/domain/dto/task_dto.dart';
 import 'package:planin_me/app/domain/times_a_day.dart';
 
-class ProfessorList extends StatelessWidget {
-  const ProfessorList({Key? key}) : super(key: key);
+class TaskList extends StatelessWidget {
+  const TaskList({Key? key}) : super(key: key);
 
   Future<List<DTOTask>> consult() async {
     return [

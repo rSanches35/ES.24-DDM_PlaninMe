@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:planin_me/widget/rotes.dart';
 
-class ProfessorForm extends StatelessWidget {
+class TaskForm extends StatelessWidget {
 
-  const ProfessorForm({Key? key}) : super(key: key);
+  const TaskForm({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context){

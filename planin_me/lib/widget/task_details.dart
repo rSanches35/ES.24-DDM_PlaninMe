@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:planin_me/widget/rotes.dart';
 
-class ProfessorDetails extends StatelessWidget {
+class TaskDetails extends StatelessWidget {
 
-  const ProfessorDetails({Key? key}) : super(key: key);
+  const TaskDetails({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context){

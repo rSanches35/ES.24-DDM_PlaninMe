@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:planin_me/widget/rotes.dart';
 
-import 'package:planin_me/widget/professor_list.dart';
-import 'package:planin_me/widget/professor_form.dart';
-import 'package:planin_me/widget/professor_details.dart';
+import 'package:planin_me/widget/task_list.dart';
+import 'package:planin_me/widget/task_form.dart';
+import 'package:planin_me/widget/task_details.dart';
 
 
 class MyApp extends StatelessWidget {
@@ -19,9 +19,9 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(primarySwatch: Colors.cyan),
       routes: {
-        Rotes.home : (context) => ProfessorList(),
-        Rotes.professorForm : (context) => ProfessorForm(),
-        Rotes.professorDetails : (context) => ProfessorDetails()
+        Rotes.home : (context) => TaskList(),
+        Rotes.taskForm : (context) => TaskForm(),
+        Rotes.taskDetails : (context) => TaskDetails()
       },
     );
   }
