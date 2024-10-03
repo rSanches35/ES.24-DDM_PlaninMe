@@ -1,7 +1,6 @@
 
 import 'package:planin_me/app/domain/interface/idao_task.dart';
 import 'package:planin_me/app/domain/dto/task_dto.dart';
-import 'package:planin_me/app/domain/times_a_day.dart';
 
 class Task {
 
@@ -9,7 +8,6 @@ class Task {
   late dynamic id;
   late String name;
   late String? description;
-  late TimesADay times_a_day;
   late int _priority;
   late bool isActive = true;
 
@@ -22,7 +20,6 @@ class Task {
     id = dto.id;
     name = dto.name;
     description = dto.description;
-    times_a_day = dto.times_a_day;
     priority = dto.priority;
     isActive = dto.isActive;
   }

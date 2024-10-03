@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-
 import 'package:planin_me/app/domain/dto/task_dto.dart';
-import 'package:planin_me/app/domain/times_a_day.dart';
 
 class TaskList extends StatelessWidget {
   const TaskList({Key? key}) : super(key: key);
@@ -11,18 +9,15 @@ class TaskList extends StatelessWidget {
       DTOTask(
           name: 'Wake Up',
           priority: 3,
-          isActive: true,
-          times_a_day: TimesADay()),
+          isActive: true),
       DTOTask(
           name: 'Feed Neko',
           priority: 1,
-          isActive: true,
-          times_a_day: TimesADay()),
+          isActive: true),
       DTOTask(
           name: 'Do Laundry',
           priority: 2,
-          isActive: false,
-          times_a_day: TimesADay()),
+          isActive: false),
     ];
   }
 

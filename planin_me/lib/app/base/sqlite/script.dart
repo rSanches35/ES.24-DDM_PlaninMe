@@ -14,7 +14,7 @@ const tableCreate = [
 
     id_times_a_day INTEGER NOT NULL PRIMARY KEY,
     week_day VARCHAR(50) NOT NULL,
-    hour TIME NOT NULL,
+    time TIME NOT NULL,
     task_id INT NOT NULL,
     FOREIGN KEY (task_id) REFERENCES task(id_task)
   );
@@ -24,7 +24,7 @@ const tableCreate = [
 const tableInsert = [
   
   'INSERT INTO task (name, priority, is_active) VALUES ("Wake Up", "1", true)',
-  'INSERT INTO times_a_day (week_day, hour, task_id) VALUES ("Sunday", "14:30:00", 1)',
-  'INSERT INTO times_a_day (week_day, hour, task_id) VALUES ("Sunday", "17:30:00", 1)',
-  'INSERT INTO times_a_day (week_day, hour, task_id) VALUES ("Sunday", "20:30:00", 1)',
+  'INSERT INTO times_a_day (week_day, time, task_id) VALUES ("Sunday", "14:30:00", 1)',
+  'INSERT INTO times_a_day (week_day, time, task_id) VALUES ("Sunday", "17:30:00", 1)',
+  'INSERT INTO times_a_day (week_day, time, task_id) VALUES ("Sunday", "20:30:00", 1)',
 ];
