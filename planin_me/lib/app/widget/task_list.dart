@@ -2,10 +2,10 @@ import 'dart:math';
 
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:planin_me/widget/routes.dart';
+import 'package:planin_me/app/widget/routes.dart';
 import 'package:planin_me/app/domain/dto/task_dto.dart';
-import 'package:planin_me/widget/task_details.dart';
-import 'package:planin_me/widget/task_form.dart';
+import 'package:planin_me/app/widget/task_details.dart';
+import 'package:planin_me/app/widget/task_form.dart';
 
 class TaskList extends StatelessWidget {
   const TaskList({Key? key}) : super(key: key);
