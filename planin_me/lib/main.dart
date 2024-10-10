@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:planin_me/my_app.dart';
+import 'package:planin_me/app/app.dart';
 
 main(){
 

@@ -1,7 +1,7 @@
 import 'package:sqflite/sqflite.dart';
 import 'package:path/path.dart';
 
-import 'package:planin_me/app/base/sqlite/script.dart';
+import 'package:planin_me/app/database/script.dart';
 
 class Connexion {
   //Attributes

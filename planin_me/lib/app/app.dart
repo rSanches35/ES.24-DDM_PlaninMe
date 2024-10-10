@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:planin_me/widget/routes.dart';
+import 'package:planin_me/app/widget/routes.dart';
 
-import 'package:planin_me/widget/task_list.dart';
-import 'package:planin_me/widget/task_form.dart';
-import 'package:planin_me/widget/task_details.dart';
+import 'package:planin_me/app/widget/task_list.dart';
+import 'package:planin_me/app/widget/task_form.dart';
+import 'package:planin_me/app/widget/task_details.dart';
 
 
 class MyApp extends StatelessWidget {
