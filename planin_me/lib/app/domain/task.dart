@@ -17,7 +17,7 @@ class Task {
   //Methods
   Task({required this.dao});
 
-  validate({required DTOTask dto}){
+  fill({required DTOTask dto}){
 
     id = dto.id;
     name = dto.name;
@@ -28,9 +28,10 @@ class Task {
 
   Future<DTOTask> save(DTOTask dto) async {
     
-    validate(dto: dto);
+    fill(dto: dto);
     return dao.save(dto);
   }
+
   Future<List<DTOTask>> list() async {return dao.list();}
   Future<DTOTask> edit(DTOTask dto) async {return dao.edit(dto);}
   void delete(dynamic id) async {dao.delete(id);}

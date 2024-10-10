@@ -18,14 +18,13 @@ class TaskForm extends StatelessWidget {
       final isActive = "1";
 
       void create(String name, String description, String priority, String isActive) {
-        // Implementação da função criar
+
         print('Name: $name');
         print('Description: $description');
         print('Priority: $priority');
         print('Active: $isActive');
       }
 
-      // Chame a função criar com os dados coletados
       create(name, description, priority, isActive);
     }
 

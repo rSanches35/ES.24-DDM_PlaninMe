@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
+import 'package:planin_me/app/widget/task_form.dart';
 import 'package:planin_me/app/application/ap_task.dart';
 import 'package:planin_me/app/domain/dto/task_dto.dart';
 import 'package:planin_me/app/widget/task_details.dart';
-import 'package:planin_me/app/widget/task_form.dart';
 
 class TaskList extends StatelessWidget {
   const TaskList({Key? key}) : super(key: key);
