@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import 'package:planin_me/app/application/ap_task.dart';
 import 'package:planin_me/app/domain/dto/task_dto.dart';
 import 'package:planin_me/app/widget/task_details.dart';
@@ -11,6 +12,32 @@ class TaskList extends StatelessWidget {
 
     APTask apTask = APTask();
     return await apTask.list();
+  }
+
+  String getPriorityText(int priority) {
+    switch (priority) {
+      case 1:
+        return 'Low';
+      case 2:
+        return 'Medium';
+      case 3:
+        return 'High';
+      default:
+        return 'Unknown';
+    }
+  }
+
+  Color getPriorityColor(int priority) {
+    switch (priority) {
+      case 1:
+        return Colors.green; // Low
+      case 2:
+        return Colors.amber; // Medium
+      case 3:
+        return Colors.red; // High
+      default:
+        return Colors.black; // Default color for unknown
+    }
   }
 
   @override
@@ -35,7 +62,20 @@ class TaskList extends StatelessWidget {
                 return ListTile(
                   leading: Icon(Icons.insert_invitation_rounded),
                   title: Text(task.name),
-                  subtitle: Text('Priority: ${task.priority}'),
+                  subtitle: RichText(
+                    text: TextSpan(
+                      children: [
+                        TextSpan(
+                          text: 'Priority: ',
+                          style: TextStyle(color: Colors.black),
+                        ),
+                        TextSpan(
+                          text: getPriorityText(task.priority),
+                          style: TextStyle(color: getPriorityColor(task.priority)),
+                        ),
+                      ],
+                    ),
+                  ),
                   onTap: () => Navigator.push( context,
                     MaterialPageRoute(builder: (context) => const TaskDetails()),
                   ),
