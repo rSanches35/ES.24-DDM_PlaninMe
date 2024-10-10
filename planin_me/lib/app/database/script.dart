@@ -2,11 +2,11 @@ const tableCreate = [
   '''
   CREATE TABLE task (
 
-    id_task INTEGER NOT NULL PRIMARY KEY,
+    id INTEGER NOT NULL PRIMARY KEY,
     name VARCHAR(200) NOT NULL,
     description VARCHAR(200),
     priority CHAR(1) NOT NULL,
-    is_active BOOL NOT NULL
+    isActive INT NOT NULL
   );
   ''',
   '''
@@ -23,7 +23,6 @@ const tableCreate = [
 
 const tableInsert = [
   
-  'INSERT INTO task (name, priority, is_active) VALUES ("Wake Up", "1", true)',
   'INSERT INTO times_a_day (week_day, time, task_id) VALUES ("Sunday", "14:30:00", 1)',
   'INSERT INTO times_a_day (week_day, time, task_id) VALUES ("Sunday", "17:30:00", 1)',
   'INSERT INTO times_a_day (week_day, time, task_id) VALUES ("Sunday", "20:30:00", 1)',

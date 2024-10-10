@@ -3,13 +3,13 @@ import 'package:path/path.dart';
 
 import 'package:planin_me/app/database/script.dart';
 
-class Connexion {
+class Connection {
   //Attributes
   static late Database _db;
   static bool conexaoCriada = false;
 
   //Methods
-  static Future<Database> abrir() async {
+  static Future<Database> open() async {
     if (!conexaoCriada) {
       var path = join(await getDatabasesPath(), 'banco.db');
 

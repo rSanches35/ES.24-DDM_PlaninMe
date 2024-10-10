@@ -6,7 +6,7 @@ class DTOTask {
   late String name;
   late String? description;
   late int priority;
-  late bool isActive = true;
+  late int isActive = 1;
 
   //Methods
   DTOTask({
@@ -14,6 +14,6 @@ class DTOTask {
     required this.name,
     this.description,
     required this.priority,
-    this.isActive = true
+    this.isActive = 1
   });
 }

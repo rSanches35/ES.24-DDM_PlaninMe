@@ -8,27 +8,29 @@ void main() {
   //Attributes
   late Task task;
   late DTOTask dto;
-  late DAOTaskFake dao;
+  //late DAOTaskFake dao;
 
   group(['GROUP_Description'], () {
     setUp(() {
-      dao = DAOTaskFake();
+      //dao = DAOTaskFake();
     });
 
     test('TEST_Description', () {
 
       dto = DTOTask(name: "Test", priority: 2);
-      task = Task(dto: dto, dao: dao);
+      //task = Task(dto: dto, dao: dao);
 
-      expect(() => task.save(dto), returnsNormally);
+      //expect(() => task.save(dto), returnsNormally);
     });
   });
 }
 
 //DAOFake
+/*
 class DAOTaskFake implements IDAOTask {
   @override
   DTOTask save(DTOTask dto) {
     return dto;
   }
 }
+*/

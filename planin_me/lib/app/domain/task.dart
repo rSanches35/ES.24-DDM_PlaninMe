@@ -8,14 +8,16 @@ class Task {
   late dynamic id;
   late String name;
   late String? description;
-  late int _priority;
-  late bool isActive = true;
+  late int priority;
+  late int isActive = 1;
 
   late DTOTask dto;
   late IDAOTask dao;
 
   //Methods
-  Task({required this.dto, required this.dao}) {
+  Task({required this.dao});
+
+  validate({required DTOTask dto}){
 
     id = dto.id;
     name = dto.name;
@@ -24,13 +26,12 @@ class Task {
     isActive = dto.isActive;
   }
 
-  DTOTask save(DTOTask dto){ return dao.save(dto);}
-
-  //Task duplicate(){ return '';}
-  String share(){ return '';}
-
-  //GETters && SETters
-  int get priority => _priority;
-  set priority(int priority) { if (priority == 1 || priority == 2 || priority == 3) { _priority = _priority;}
-    else { throw Exception('Invalid Priority!');}}
+  Future<DTOTask> save(DTOTask dto) async {
+    
+    validate(dto: dto);
+    return dao.save(dto);
+  }
+  Future<List<DTOTask>> list() async {return dao.list();}
+  Future<DTOTask> edit(DTOTask dto) async {return dao.edit(dto);}
+  void delete(dynamic id) async {dao.delete(id);}
 }
