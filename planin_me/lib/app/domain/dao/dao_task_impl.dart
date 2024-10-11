@@ -1,8 +1,8 @@
-
 import 'package:planin_me/app/database/sqlite/connection.dart';
+import 'package:sqflite/sqflite.dart';
+
 import 'package:planin_me/app/domain/dto/task_dto.dart';
 import 'package:planin_me/app/domain/interface/idao_task.dart';
-import 'package:sqflite/sqflite.dart';
 
 class DAOTaskImpl implements IDAOTask {
 

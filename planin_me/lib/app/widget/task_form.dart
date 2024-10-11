@@ -1,31 +1,31 @@
 import 'package:flutter/material.dart';
 
+import 'package:planin_me/app/application/ap_task.dart';
+import 'package:planin_me/app/domain/dto/task_dto.dart';
+
 class TaskForm extends StatelessWidget {
   const TaskForm({Key? key}) : super(key: key);
 
-@override
+  @override
   Widget build(BuildContext context) {
-
     final _nameController = TextEditingController();
     final _descriptionController = TextEditingController();
     final _priorityController = TextEditingController();
 
-    void _createTask() {
-
+    void _createTask() async {
       final name = _nameController.text;
       final description = _descriptionController.text;
       final priority = _priorityController.text;
-      final isActive = "1";
+      final isActive = 1;
 
-      void create(String name, String description, String priority, String isActive) {
+      DTOTask dto = DTOTask(
+          name: name,
+          description: description,
+          priority: int.parse(priority).toInt(),
+          isActive: isActive);
 
-        print('Name: $name');
-        print('Description: $description');
-        print('Priority: $priority');
-        print('Active: $isActive');
-      }
-
-      create(name, description, priority, isActive);
+      APTask apTask = APTask();
+      await apTask.save(dto);
     }
 
     return Scaffold(
@@ -48,7 +48,9 @@ class TaskForm extends StatelessWidget {
                 decoration: InputDecoration(labelText: 'Name'),
               ),
             ),
-            SizedBox(height: 24,),
+            SizedBox(
+              height: 24,
+            ),
             SizedBox(
               width: 350,
               child: TextFormField(
@@ -87,5 +89,3 @@ class TaskForm extends StatelessWidget {
     );
   }
 }
-
-  

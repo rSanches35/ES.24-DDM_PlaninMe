@@ -10,6 +10,7 @@ class TaskList extends StatelessWidget {
 
   Future<List<DTOTask>> consult() async {
 
+    
     APTask apTask = APTask();
     return await apTask.list();
   }

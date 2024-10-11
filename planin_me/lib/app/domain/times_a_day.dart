@@ -14,7 +14,9 @@ class TimesADay {
   late IDAOTimesADay dao;
 
   //Methods
-  TimesADay({required this.dto, required this.dao}){
+  TimesADay({required this.dao});
+  
+  fill({required DTOTimesADay dto}) {
 
     id = dto.id;
     week_day = dto.week_day;
@@ -22,5 +24,13 @@ class TimesADay {
     task_id = dto.task_id;
   }
 
-  DTOTimesADay save(DTOTimesADay dto){ return dao.save(dto);}
+  Future<DTOTimesADay> save(DTOTimesADay dto) async {
+    
+    fill(dto: dto);
+    return dao.save(dto);
+  }
+
+  Future<List<DTOTimesADay>> list() async {return dao.list();}
+  Future<DTOTimesADay> edit(DTOTimesADay dto) async {return dao.edit(dto);}
+  void delete(dynamic id) async {dao.delete(id);}
 }
