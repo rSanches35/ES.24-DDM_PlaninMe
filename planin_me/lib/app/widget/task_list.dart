@@ -84,6 +84,7 @@ class TaskList extends StatelessWidget {
                               ],
                             ),
                           ),
+                          /*
                           trailing: IconButton(
                             icon: Icon(Icons.edit),
                             color: Colors.grey,
@@ -94,6 +95,7 @@ class TaskList extends StatelessWidget {
                               );
                             },
                           ),
+                          */
                           onTap: () => Navigator.push(
                             context,
                             MaterialPageRoute(builder: (context) => const TaskDetails()),
