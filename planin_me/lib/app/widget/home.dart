@@ -9,49 +9,56 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Home'),
-        backgroundColor: Colors.cyan[300],
+        title: Text('Home',
+          style: TextStyle(
+            fontWeight: FontWeight.bold,
+            color: Colors.blueGrey[900],
+          ),
+        ),
+        backgroundColor: Colors.teal[300],
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            // First Button: "Routines"
             ElevatedButton(
               onPressed: () {
-                // Action when "Routines" is pressed
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => const TaskList()),
                 );
               },
               style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.cyan, // Background color
-                padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 10),
+                backgroundColor: Colors.teal[300],
+                foregroundColor: Colors.blueGrey[900],
+                elevation: 4,
+                padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 5),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10),
+                ),
               ),
-              child: const Text(
-                'Tasks',
-                style: TextStyle(fontSize: 18),
+              child: const Text('Tasks',
+                style: TextStyle(fontSize: 17),
               ),
             ),
-            const SizedBox(height: 20), // Space between buttons
-
-            // Second Button: "Tasks"
+            const SizedBox(height: 7),
             ElevatedButton(
               onPressed: () {
-                // Action when "Tasks" is pressed
-                Navigator.push(
-                  context,
+                Navigator.push(context,
                   MaterialPageRoute(builder: (context) => const RoutineList()),
                 );
               },
               style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.cyan,
-                padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 10),
+                backgroundColor: Colors.teal[300],
+                foregroundColor: Colors.blueGrey[900],
+                elevation: 4,
+                padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 5),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10),
+                ),
               ),
-              child: const Text(
-                'Routines',
-                style: TextStyle(fontSize: 18),
+              child: const Text('Routines',
+                style: TextStyle(fontSize: 17),
               ),
             ),
           ],
