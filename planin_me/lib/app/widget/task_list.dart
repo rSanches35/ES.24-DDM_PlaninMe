@@ -1,22 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:planin_me/app/widget/routes.dart';
 
 import 'package:planin_me/app/widget/task_form.dart';
 import 'package:planin_me/app/application/ap_task.dart';
 import 'package:planin_me/app/domain/dto/task_dto.dart';
 import 'package:planin_me/app/widget/task_details.dart';
 
+
 class TaskList extends StatelessWidget {
   const TaskList({Key? key}) : super(key: key);
 
   Future<List<DTOTask>> consult() async {
-
-    
     APTask apTask = APTask();
     return await apTask.list();
   }
 
   String getPriorityText(int priority) {
-
     switch (priority) {
       case 1: return 'Low';
       case 2: return 'Medium';
@@ -26,7 +25,6 @@ class TaskList extends StatelessWidget {
   }
 
   Color getPriorityColor(int priority) {
-
     switch (priority) {
       case 1: return Colors.green;
       case 2: return Colors.amber;
@@ -85,6 +83,16 @@ class TaskList extends StatelessWidget {
                                 ),
                               ],
                             ),
+                          ),
+                          trailing: IconButton(
+                            icon: Icon(Icons.edit),
+                            color: Colors.grey,
+                            onPressed: () {
+                              Navigator.pushNamed(context,
+                                Routes.taskUpdateForm,
+                                arguments: task
+                              );
+                            },
                           ),
                           onTap: () => Navigator.push(
                             context,
