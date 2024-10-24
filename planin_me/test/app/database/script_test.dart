@@ -18,7 +18,7 @@ void main() {
       var db = await openDatabase(inMemoryDatabasePath, version: 1,
           onCreate: (db, version) {
         tableCreate.forEach(db.execute);
-        tableInsert.forEach(db.execute);
+        //tableInsert.forEach(db.execute);
       });
 
       var list = await db.rawQuery('SELECT * FROM task');
@@ -32,7 +32,7 @@ void main() {
       var db = await openDatabase(inMemoryDatabasePath, version: 1,
           onCreate: (db, version) {
         tableCreate.forEach(db.execute);
-        tableInsert.forEach(db.execute);
+        //tableInsert.forEach(db.execute);
       });
 
       var list = await db.rawQuery('SELECT * FROM times_a_day');

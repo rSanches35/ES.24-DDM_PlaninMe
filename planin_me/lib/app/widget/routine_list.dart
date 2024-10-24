@@ -48,9 +48,29 @@ class RoutineList extends StatelessWidget {
                             routine.name,
                             style: TextStyle(fontSize: 18),
                           ),
-                          subtitle: Text(
-                            routine.code
+                          subtitle: RichText(
+                            text: TextSpan(
+                              children: [
+                                TextSpan(
+                                  text: 'Code: ',
+                                  style: TextStyle(color: Colors.black, fontSize: 16),
+                                ),
+                                TextSpan(
+                                  text: routine.code,
+                                  style: TextStyle(color: Colors.black, fontSize: 15),
+                                ),
+                              ],
+                            ),
                           ),
+                          children: <Widget>[
+                            Padding(
+                              padding: const EdgeInsets.all(16.0),
+                              child: Text(
+                                routine.description ?? 'No description available',
+                                style: TextStyle(fontSize: 16, color: Colors.black54),
+                              ),
+                            ),
+                          ],
                         ),
                       ),
                     ),
