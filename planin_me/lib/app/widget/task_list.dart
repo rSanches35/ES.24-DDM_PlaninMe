@@ -1,11 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:planin_me/app/widget/routes.dart';
-
 import 'package:planin_me/app/widget/task_form.dart';
 import 'package:planin_me/app/application/ap_task.dart';
 import 'package:planin_me/app/domain/dto/task_dto.dart';
 import 'package:planin_me/app/widget/task_details.dart';
-
 
 class TaskList extends StatelessWidget {
   const TaskList({Key? key}) : super(key: key);
@@ -61,7 +58,7 @@ class TaskList extends StatelessWidget {
                       width: MediaQuery.of(context).size.width * 0.95,
                       child: Card(
                         elevation: 0.8,
-                        child: ListTile(
+                        child: ExpansionTile(
                           leading: Icon(
                             Icons.insert_invitation_rounded,
                             size: 35,
@@ -84,22 +81,15 @@ class TaskList extends StatelessWidget {
                               ],
                             ),
                           ),
-                          /*
-                          trailing: IconButton(
-                            icon: Icon(Icons.edit),
-                            color: Colors.grey,
-                            onPressed: () {
-                              Navigator.pushNamed(context,
-                                Routes.taskUpdateForm,
-                                arguments: task
-                              );
-                            },
-                          ),
-                          */
-                          onTap: () => Navigator.push(
-                            context,
-                            MaterialPageRoute(builder: (context) => const TaskDetails()),
-                          ),
+                          children: <Widget>[
+                            Padding(
+                              padding: const EdgeInsets.all(16.0),
+                              child: Text(
+                                task.description ?? 'No description available',
+                                style: TextStyle(fontSize: 16, color: Colors.black54),
+                              ),
+                            ),
+                          ],
                         ),
                       ),
                     ),
