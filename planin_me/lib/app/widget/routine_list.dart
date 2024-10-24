@@ -15,8 +15,13 @@ class RoutineList extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Routine List'),
-        backgroundColor: Colors.cyan[300],
+        title: Text('Routine List',
+          style: TextStyle(
+            fontWeight: FontWeight.bold,
+            color: Colors.blueGrey[900],
+          ),
+        ),
+        backgroundColor: Colors.teal[300],
       ),
       body: Container(
         color: Colors.grey[200],
@@ -46,18 +51,18 @@ class RoutineList extends StatelessWidget {
                           ),
                           title: Text(
                             routine.name,
-                            style: TextStyle(fontSize: 18),
+                            style: TextStyle(color: Colors.blueGrey[900], fontSize: 18),
                           ),
                           subtitle: RichText(
                             text: TextSpan(
                               children: [
                                 TextSpan(
                                   text: 'Code: ',
-                                  style: TextStyle(color: Colors.black, fontSize: 16),
+                                  style: TextStyle(color: Colors.blueGrey[900], fontSize: 16),
                                 ),
                                 TextSpan(
                                   text: routine.code,
-                                  style: TextStyle(color: Colors.black, fontSize: 15),
+                                  style: TextStyle(color: Colors.blueGrey[900], fontSize: 15),
                                 ),
                               ],
                             ),
@@ -83,7 +88,7 @@ class RoutineList extends StatelessWidget {
       ),
       floatingActionButton: IconButton(
         icon: Icon(Icons.add),
-        color: Colors.cyan[700],
+        color: Colors.teal[500],
         iconSize: 30,
         onPressed: () => Navigator.push( context,
           MaterialPageRoute(builder: (context) => const RoutineForm()),

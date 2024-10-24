@@ -33,8 +33,13 @@ class TaskList extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Task List'),
-        backgroundColor: Colors.cyan[300],
+        title: Text('Task List',
+          style: TextStyle(
+            fontWeight: FontWeight.bold,
+            color: Colors.blueGrey[900],
+          ),
+        ),
+        backgroundColor: Colors.teal[300],
       ),
       body: Container(
         color: Colors.grey[200],
@@ -53,7 +58,7 @@ class TaskList extends StatelessWidget {
                   return Align(
                     alignment: Alignment.center,
                     child: Container(
-                      margin: const EdgeInsets.symmetric(vertical: 8),
+                      margin: const EdgeInsets.symmetric(vertical: 5),
                       width: MediaQuery.of(context).size.width * 0.95,
                       child: Card(
                         elevation: 0.8,
@@ -64,14 +69,14 @@ class TaskList extends StatelessWidget {
                           ),
                           title: Text(
                             task.name,
-                            style: TextStyle(fontSize: 18),
+                            style: TextStyle(color: Colors.blueGrey[900], fontSize: 18),
                           ),
                           subtitle: RichText(
                             text: TextSpan(
                               children: [
                                 TextSpan(
                                   text: 'Priority: ',
-                                  style: TextStyle(color: Colors.black, fontSize: 16),
+                                  style: TextStyle(color: Colors.blueGrey[900], fontSize: 16),
                                 ),
                                 TextSpan(
                                   text: getPriorityText(task.priority),
@@ -101,7 +106,7 @@ class TaskList extends StatelessWidget {
       ),
       floatingActionButton: IconButton(
         icon: Icon(Icons.add),
-        color: Colors.cyan[700],
+        color: Colors.teal[500],
         iconSize: 30,
         onPressed: () => Navigator.push( context,
           MaterialPageRoute(builder: (context) => const TaskForm()),
