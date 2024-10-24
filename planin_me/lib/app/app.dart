@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+
 import 'package:planin_me/app/widget/routes.dart';
 import 'package:planin_me/app/domain/dto/task_dto.dart';
 
+import 'package:planin_me/app/widget/home.dart';
 import 'package:planin_me/app/widget/task_list.dart';
 import 'package:planin_me/app/widget/task_form.dart';
 import 'package:planin_me/app/widget/task_details.dart';
@@ -36,7 +38,8 @@ class MyApp extends StatelessWidget {
         return null;
       },
       routes: {
-        Routes.home : (context) => TaskList(),
+        Routes.home : (context) => Home(),
+        Routes.taskList : (context) => TaskList(),
         Routes.taskForm : (context) => TaskForm(),
         Routes.taskUpdateForm : (context) => TaskUpdateForm(),
         Routes.taskDetails : (context) => TaskDetails()

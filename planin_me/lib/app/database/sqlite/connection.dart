@@ -18,7 +18,6 @@ class Connection {
 
       _db = await openDatabase(path, version: 1, onCreate: (db, version) {
         tableCreate.forEach(db.execute);
-        tableInsert.forEach(db.execute);
       });
       conexaoCriada = true;
     }
