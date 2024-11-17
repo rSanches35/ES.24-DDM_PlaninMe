@@ -3,6 +3,9 @@ import 'package:planin_me/app/widget/task_form.dart';
 import 'package:planin_me/app/application/ap_task.dart';
 import 'package:planin_me/app/domain/dto/task_dto.dart';
 
+import 'package:planin_me/app/widget/components/nav_bar.dart';
+import 'package:planin_me/app/widget/routine_list.dart';
+
 class TaskList extends StatelessWidget {
   const TaskList({Key? key}) : super(key: key);
 
@@ -33,7 +36,8 @@ class TaskList extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Task List',
+        title: Text(
+          'Task List',
           style: TextStyle(
             fontWeight: FontWeight.bold,
             color: Colors.blueGrey[900],
@@ -108,9 +112,23 @@ class TaskList extends StatelessWidget {
         icon: Icon(Icons.add),
         color: Colors.teal[500],
         iconSize: 30,
-        onPressed: () => Navigator.push( context,
-          MaterialPageRoute(builder: (context) => const TaskForm()),
+        onPressed: () => Navigator.push(
+          context, MaterialPageRoute(builder: (context) => const TaskForm()),
         ),
+      ),
+      bottomNavigationBar: NavBar(
+        currentIndex: 1,
+        onTap: (index) {
+          if (index == 0) {
+            Navigator.push(
+              context, MaterialPageRoute(builder: (context) => const RoutineList()),
+            );
+          } else if (index == 1) {
+            Navigator.pushReplacement(
+              context, MaterialPageRoute(builder: (context) => const TaskList()),
+            );
+          } else if (index == 2) {}
+        },
       ),
     );
   }

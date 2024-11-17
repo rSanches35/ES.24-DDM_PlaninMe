@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 import 'package:planin_me/app/widget/routes.dart';
 
-import 'package:planin_me/app/widget/home.dart';
 import 'package:planin_me/app/widget/task_list.dart';
 import 'package:planin_me/app/widget/task_form.dart';
 import 'package:planin_me/app/widget/routine_list.dart';
@@ -22,11 +21,10 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(primarySwatch: Colors.cyan),
       routes: {
-        Routes.home : (context) => Home(),
+        Routes.home : (context) => RoutineList(),
+        Routes.routineForm : (context) => RoutineForm(),
         Routes.taskList : (context) => TaskList(),
         Routes.taskForm : (context) => TaskForm(),
-        Routes.routineList : (context) => RoutineList(),
-        Routes.routineForm : (context) => RoutineForm(),
       },
     );
   }

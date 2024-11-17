@@ -3,6 +3,9 @@ import 'package:planin_me/app/domain/dto/routine_dto.dart';
 import 'package:planin_me/app/application/ap_routine.dart';
 import 'package:planin_me/app/widget/routine_form.dart';
 
+import 'package:planin_me/app/widget/components/nav_bar.dart';
+import 'package:planin_me/app/widget/task_list.dart';
+
 class RoutineList extends StatelessWidget {
   const RoutineList({Key? key}) : super(key: key);
 
@@ -15,7 +18,8 @@ class RoutineList extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Routine List',
+        title: Text(
+          'Routine List',
           style: TextStyle(
             fontWeight: FontWeight.bold,
             color: Colors.blueGrey[900],
@@ -90,9 +94,23 @@ class RoutineList extends StatelessWidget {
         icon: Icon(Icons.add),
         color: Colors.teal[500],
         iconSize: 30,
-        onPressed: () => Navigator.push( context,
-          MaterialPageRoute(builder: (context) => const RoutineForm()),
+        onPressed: () => Navigator.push(
+          context, MaterialPageRoute(builder: (context) => const RoutineForm()),
         ),
+      ),
+      bottomNavigationBar: NavBar(
+        currentIndex: 0,
+        onTap: (index) {
+          if (index == 0) {
+            Navigator.pushReplacement(
+              context, MaterialPageRoute(builder: (context) => const RoutineList()),
+            );
+          } else if (index == 1) {
+            Navigator.push(
+              context, MaterialPageRoute(builder: (context) => const TaskList()),
+            );
+          } else if (index == 2) {}
+        },
       ),
     );
   }
