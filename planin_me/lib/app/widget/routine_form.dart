@@ -46,6 +46,7 @@ class RoutineForm extends StatelessWidget {
         backgroundColor: Color(0xFF597FA3),
       ),
       body: Container(
+        color: Colors.grey[200],
         alignment: Alignment.center,
         padding: const EdgeInsets.all(20),
         child: Column(
