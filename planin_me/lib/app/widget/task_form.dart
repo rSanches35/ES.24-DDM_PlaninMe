@@ -40,6 +40,7 @@ class TaskForm extends StatelessWidget {
             color: Colors.white,
           ),
         ),
+        titleSpacing: 4,
         iconTheme: IconThemeData(color: Colors.white),
         backgroundColor: Color(0xFF597FA3),
       ),
