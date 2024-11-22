@@ -41,6 +41,7 @@ class RoutineForm extends StatelessWidget {
             color: Colors.white,
           ),
         ),
+        iconTheme: IconThemeData(color: Colors.white),
         backgroundColor: Color(0xFF597FA3),
       ),
       body: Container(

@@ -25,6 +25,7 @@ class RoutineList extends StatelessWidget {
             color: Colors.white,
           ),
         ),
+        automaticallyImplyLeading: false,
         backgroundColor: Color(0xFF597FA3),
       ),
       body: Container(
