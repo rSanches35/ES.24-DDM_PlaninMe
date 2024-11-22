@@ -3,6 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:planin_me/app/application/ap_routine.dart';
 import 'package:planin_me/app/domain/dto/routine_dto.dart';
 
+import 'package:planin_me/app/widget/components/nav_bar.dart';
+import 'package:planin_me/app/widget/routine_list.dart';
+import 'package:planin_me/app/widget/task_list.dart';
+
 class RoutineForm extends StatelessWidget {
   const RoutineForm({Key? key}) : super(key: key);
 
@@ -91,6 +95,22 @@ class RoutineForm extends StatelessWidget {
             ),
           ],
         ),
+      ),
+      bottomNavigationBar: NavBar(
+        currentIndex: 0,
+        onTap: (index) {
+          if (index == 0) {
+            Navigator.pushReplacement(
+              context,
+              MaterialPageRoute(builder: (context) => const RoutineList()),
+            );
+          } else if (index == 1) {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => const TaskList()),
+            );
+          } else if (index == 2) {}
+        },
       ),
     );
   }
