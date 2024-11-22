@@ -33,10 +33,10 @@ class TaskForm extends StatelessWidget {
         title: Text('Task Create',
           style: TextStyle(
             fontWeight: FontWeight.bold,
-            color: Colors.blueGrey[900],
+            color: Colors.white,
           ),
         ),
-        backgroundColor: Colors.teal[300],
+        backgroundColor: Color(0xFF597FA3),
       ),
       body: Container(
         alignment: Alignment.center,
@@ -82,8 +82,8 @@ class TaskForm extends StatelessWidget {
                   onPressed: _createTask,
                   child: Text('Create TASK'),
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.teal[500],
-                    foregroundColor: Colors.blueGrey[900],
+                    backgroundColor: Color.fromARGB(255, 105, 146, 185),
+                    foregroundColor: Colors.white,
                   ),
                 ),
               ),

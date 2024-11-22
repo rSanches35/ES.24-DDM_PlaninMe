@@ -40,10 +40,10 @@ class TaskList extends StatelessWidget {
           'Task List',
           style: TextStyle(
             fontWeight: FontWeight.bold,
-            color: Colors.blueGrey[900],
+            color: Colors.white,
           ),
         ),
-        backgroundColor: Colors.teal[300],
+        backgroundColor: Color(0xFF597FA3),
       ),
       body: Container(
         color: Colors.grey[200],
@@ -110,7 +110,7 @@ class TaskList extends StatelessWidget {
       ),
       floatingActionButton: IconButton(
         icon: Icon(Icons.add),
-        color: Colors.teal[500],
+        color: Color.fromARGB(255, 105, 146, 185),
         iconSize: 30,
         onPressed: () => Navigator.push(
           context, MaterialPageRoute(builder: (context) => const TaskForm()),
